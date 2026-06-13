@@ -1,0 +1,125 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        navy: {
+          950: '#040E1A',
+          900: '#071B2E',
+          800: '#0D2845',
+          700: '#143660',
+          600: '#1B4478',
+          500: '#2358A8',
+          400: '#4A7EC5',
+          300: '#7AA5D9',
+          200: '#B0CCE9',
+          100: '#D8E8F6',
+          50: '#EDF4FA',
+        },
+        richblack: {
+          900: '#0B0D12',
+          800: '#111318',
+          700: '#191C23',
+        },
+        electric: {
+          700: '#0044BB',
+          600: '#0052CC',
+          500: '#0066FF',
+          400: '#3385FF',
+          300: '#66A3FF',
+          100: '#CCE0FF',
+          50: '#E5EEFF',
+        },
+        gold: {
+          700: '#9A7A00',
+          600: '#B8960C',
+          500: '#D4AF37',
+          400: '#E5C855',
+          300: '#F0D875',
+          100: '#FBF3CC',
+          50: '#FDFAED',
+        },
+        soft: '#F5F7FA',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+      },
+      fontSize: {
+        'display-2xl': ['4.5rem', { lineHeight: '1.04', letterSpacing: '-0.025em' }],
+        'display-xl': ['3.75rem', { lineHeight: '1.06', letterSpacing: '-0.022em' }],
+        'display-lg': ['3rem', { lineHeight: '1.08', letterSpacing: '-0.02em' }],
+        'display-md': ['2.25rem', { lineHeight: '1.15', letterSpacing: '-0.018em' }],
+        'display-sm': ['1.875rem', { lineHeight: '1.2', letterSpacing: '-0.015em' }],
+        'xs': ['0.75rem', { lineHeight: '1rem' }],
+        '2xs': ['0.625rem', { lineHeight: '0.875rem' }],
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '100': '25rem',
+        '112': '28rem',
+        '128': '32rem',
+      },
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem',
+      },
+      animation: {
+        'fade-up': 'fadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'fade-in': 'fadeIn 0.6s ease-out forwards',
+        'fade-left': 'fadeLeft 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'scale-in': 'scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'shimmer': 'shimmer 2s linear infinite',
+      },
+      keyframes: {
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(28px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-28px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.94)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-12px)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+      },
+      boxShadow: {
+        'enterprise': '0 4px 32px -4px rgba(7, 27, 46, 0.10)',
+        'enterprise-md': '0 8px 40px -6px rgba(7, 27, 46, 0.14)',
+        'enterprise-lg': '0 16px 56px -8px rgba(7, 27, 46, 0.18)',
+        'enterprise-xl': '0 24px 80px -12px rgba(7, 27, 46, 0.24)',
+        'blue-glow': '0 8px 32px -4px rgba(0, 102, 255, 0.30)',
+        'gold-glow': '0 8px 32px -4px rgba(212, 175, 55, 0.30)',
+        'nav': '0 1px 0 0 rgba(0,0,0,0.06), 0 4px 24px -4px rgba(7,27,46,0.08)',
+        'card-hover': '0 20px 60px -12px rgba(7, 27, 46, 0.22)',
+      },
+      backgroundImage: {
+        'gradient-navy': 'linear-gradient(160deg, #071B2E 0%, #0D2845 100%)',
+        'gradient-dark': 'linear-gradient(160deg, #0B0D12 0%, #071B2E 55%, #0D2845 100%)',
+        'gradient-blue': 'linear-gradient(135deg, #0052CC 0%, #0066FF 100%)',
+        'gradient-gold': 'linear-gradient(135deg, #B8960C 0%, #D4AF37 50%, #E5C855 100%)',
+        'hero-mesh': 'radial-gradient(ellipse 90% 70% at 50% -5%, rgba(0,102,255,0.13) 0%, transparent 55%), radial-gradient(ellipse 60% 50% at 85% 85%, rgba(212,175,55,0.08) 0%, transparent 50%), radial-gradient(ellipse 40% 40% at 10% 70%, rgba(0,102,255,0.06) 0%, transparent 50%)',
+        'section-gradient': 'linear-gradient(180deg, #F5F7FA 0%, #FFFFFF 100%)',
+        'card-gradient': 'linear-gradient(135deg, rgba(7,27,46,0.02) 0%, rgba(0,102,255,0.04) 100%)',
+      },
+    },
+  },
+  plugins: [],
+};
